@@ -1,0 +1,35 @@
+prefix = "bndryegress"
+
+location = "eastus"
+resource_group_name = "boundary"
+vm_sku = "Standard_D8ads_v7"
+
+subnet_id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/boundary/providers/Microsoft.Network/virtualNetworks/hub/subnets/default"
+
+vm_ssh_public_key = "ssh-rsa AAAA..."
+
+
+vm_custom_image_name = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/base-rg-gallery/providers/Microsoft.Compute/galleries/baseGallery/images/base-ubuntu-2404-amd64"
+#
+#vm_custom_image_name = "base-ubuntu-2404-amd64"
+#vm_custom_image_rg_name = "base-rg-gallery"
+
+hcp_boundary_cluster_id = "00000000-0000-0000-0000-000000000000"
+
+vault_url = "https://vault-public.example.com:8200"
+
+vault_namespace = "admin"
+vault_azure_auth_path = "azure"
+
+vault_auth_role_name = "boundary-worker-role"
+
+vault_secret_path = "secret/data/boundary/worker"
+
+boundary_auth_method_id = "ampw_XXXXXXXXXX"
+
+###
+
+#disable_vault_integration = true
+#boundary_username = "workeradmin"
+#boundary_password = "***********"
+

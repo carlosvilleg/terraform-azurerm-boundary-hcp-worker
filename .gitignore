@@ -1,6 +1,9 @@
 
 .*.swp
 *~
+*.wip
+*.bak
+*.orig
 
 *.env
 env

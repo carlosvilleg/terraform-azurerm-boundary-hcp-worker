@@ -1,8 +1,6 @@
 
 module "boundary-enterprise-worker-hvd" {
-  source  = "../../tmp/terraform-azurerm-boundary-enterprise-worker-hvd/"
-  #source  = "hashicorp/boundary-enterprise-worker-hvd/azurerm"
-  #version = "0.2.0"
+  source  = "./terraform-azurerm-boundary-enterprise-worker-hvd/"
 
   friendly_name_prefix = var.prefix
   location = var.location
@@ -37,6 +35,9 @@ module "boundary-enterprise-worker-hvd" {
   create_resource_group = false
   resource_group_name = var.resource_group_name
   vm_sku = var.vm_sku
+
+  vm_custom_image_name = var.vm_custom_image_name
+  vm_custom_image_rg_name = var.vm_custom_image_rg_name
 
   #enable_session_recording = true
   hcp_boundary_cluster_id = var.hcp_boundary_cluster_id

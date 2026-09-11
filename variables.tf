@@ -29,6 +29,19 @@ variable "hcp_boundary_cluster_id" {
 	type = string
 }
 
+variable "vm_custom_image_name" {
+	type = string
+	description = "Custom image for the worker VMs"
+	default = null
+}
+
+variable "vm_custom_image_rg_name" {
+	type = string
+	description = "RG containing the custom image for the worker VMs"
+	default = null
+}
+
+
 # Vault Configuration
 variable "vault_url" {
 	type = string
