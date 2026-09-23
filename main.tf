@@ -30,6 +30,7 @@ module "boundary-enterprise-worker-hvd" {
       boundary_username = var.boundary_username,
       boundary_password = var.boundary_password,
       boundary_dir_home = var.boundary_dir_home,
+      enable_session_recording = true
       }
 
   create_resource_group = false
@@ -39,7 +40,6 @@ module "boundary-enterprise-worker-hvd" {
   vm_custom_image_name = var.vm_custom_image_name
   vm_custom_image_rg_name = var.vm_custom_image_rg_name
 
-  #enable_session_recording = true
   hcp_boundary_cluster_id = var.hcp_boundary_cluster_id
 
   #worker_is_internal = true

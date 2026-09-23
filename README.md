@@ -3,6 +3,7 @@
 
 - A resource group needs to exist where the workers will be deployed
 - The vNet also needs to exist in the same region as the worker deployment
+- A vault auth engine for azure needs to be configured for the tenant and a role that allows the object id (principal id) of the MSI
 
 # Using a custom image
 
