@@ -44,7 +44,7 @@ module "boundary-enterprise-worker-hvd" {
 
   #worker_is_internal = true
   worker_is_internal = false
-  worker_tags = {cloud = "azure", type = "egress", environment = "sandbox"}
+  worker_tags = {cloud = "azure", region="eastus2", type = "egress", environment = "sandbox"}
 
   }
 
